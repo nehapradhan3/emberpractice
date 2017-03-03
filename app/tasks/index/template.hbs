@@ -1,1 +1,9 @@
- Tasks
+
+{{#each model as |tasks index|}}
+
+<div class="well">
+
+  <h4>{{tasks.title}}</h4>
+  <p>{{tasks.description}}</p>
+</div>
+{{/each}}
