@@ -1,11 +1,34 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+  // Initialize Firebase
+  // var config = {
+  //   apiKey: "AIzaSyAtX1lYbd7TDdm9PRrFgNHU73ql7_nG0Gk",
+  //   authDomain: "emtasks-c9699.firebaseapp.com",
+  //   databaseURL: "https://emtasks-c9699.firebaseio.com",
+  //   storageBucket: "emtasks-c9699.appspot.com",
+  //   messagingSenderId: "529479299475"
+  // };
+  // firebase.initializeApp(config);
   var ENV = {
     modulePrefix: 'emberapp',
     environment: environment,
+    // contentSecurityPolicy : {'connect-src': "'self' wss://*.firebaseio.com"},
+    contentSecurityPolicy: {
+    'script-src': "'self' 'unsafe-eval' apis.google.com",
+    'frame-src': "'self' https://*.firebaseapp.com",
+    'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+  },
+
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+        apiKey: "AIzaSyAtX1lYbd7TDdm9PRrFgNHU73ql7_nG0Gk",
+        authDomain: "emtasks-c9699.firebaseapp.com",
+        databaseURL: "https://emtasks-c9699.firebaseio.com",
+        storageBucket: "emtasks-c9699.appspot.com",
+        messagingSenderId: "529479299475"
+      },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
