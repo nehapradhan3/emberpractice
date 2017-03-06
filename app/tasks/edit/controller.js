@@ -10,15 +10,26 @@ export default Ember.Controller.extend({
 
 
       //Update tasks
-      this.store.findRecords('tasks',id).then(function(tasks){
-        task.set('title',title);
-        task.set('descripition',description);
-        task.set('date',new Date(date));
+      this.store.findRecord('tasks',id).then(function(tasks){
+        tasks.set('title',title);
+        tasks.set('descripition',description);
+        tasks.set('date',new Date(date));
 
         //save the database
-        tasks.save();
-        self.transitionTo('tasks/index');
+        tasks.save().then((e)=>{
+          console.log("Result",e);
+          this.setProperties({
+            title:'',
+            description:'',
+            date:''
+          });
+        },function(e){
+          console.log("Error",e);
+        });
+
+        self.transitionTo('tasks');
       });
     }
+
   }
 });

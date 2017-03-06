@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions:{
     addTask:function(){
+      // var self=this;
       var title=this.get('title');
       var description =this.get('description');
       var date=this.get('date');
@@ -27,7 +28,7 @@ export default Ember.Controller.extend({
     console.log("Error",e);
   });
 
-  //clear Form
+// self.transitionTo('tasks');
 
     }
   }
