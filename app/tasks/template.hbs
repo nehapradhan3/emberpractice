@@ -7,7 +7,7 @@
 <div class="well">
 
   <h4>{{#link-to 'tasks.edit'tasks.id}}{{tasks.title}}{{/link-to}}</h4>
-  <small> Due: {{tasks.date}}</small>
+  <small> Due: {{format-date tasks.date}}</small>
   <p>{{tasks.description}}</p>
 </div>
 
