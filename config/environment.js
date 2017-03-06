@@ -1,15 +1,7 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
-  // Initialize Firebase
-  // var config = {
-  //   apiKey: "AIzaSyAtX1lYbd7TDdm9PRrFgNHU73ql7_nG0Gk",
-  //   authDomain: "emtasks-c9699.firebaseapp.com",
-  //   databaseURL: "https://emtasks-c9699.firebaseio.com",
-  //   storageBucket: "emtasks-c9699.appspot.com",
-  //   messagingSenderId: "529479299475"
-  // };
-  // firebase.initializeApp(config);
+
   var ENV = {
     modulePrefix: 'emberapp',
     environment: environment,

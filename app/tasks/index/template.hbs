@@ -1,9 +1,10 @@
-
 {{#each model as |tasks index|}}
-
+{{log 'model' tasks}}
 <div class="well">
 
-  <h4>{{tasks.title}}</h4>
+  <h4>{{#link-to 'tasks.edit' tasks.id}}{{tasks.title}}{{/link-to}}</h4>
+  <small> Due: {{tasks.date}}</small>
   <p>{{tasks.description}}</p>
 </div>
+
 {{/each}}
