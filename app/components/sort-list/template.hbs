@@ -1,0 +1,29 @@
+<div>
+  <!-- {{radio-button value='date' groupValue=sortBy}}Date -->
+  {{log 'dropdownlist' dropdownlist}}
+<!--dropdown-->
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort By
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      {{#each dropdownlist as |list index|}}
+        <li><a href="#"><button {{action 'sort' list.sortBy}}>{{list.title}}</button></a></li>
+
+        <!-- {{action 'sortList'}} -->
+      {{/each}}
+
+    </ul>
+  </div>
+
+<!--dropdown ends-->
+<br><br>
+  {{input type='checkbox' checked=reverseSort}}Reverse sort
+</div>
+{{#each sortedReviews as |sort|}}
+<ul>
+  <li>
+    <p>{{sort.title}}</p>
+    <p>{{sort.date}}</p>
+  </li>
+</ul>
+{{/each}}

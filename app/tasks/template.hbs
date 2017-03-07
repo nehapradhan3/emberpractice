@@ -1,6 +1,7 @@
 
 {{outlet}}
-
+<br><br>
+{{sort-list dropdownlist=sortlist finalresult=model defaultsort='date'}}
 <h2> Tasks</h2>
 {{#each model as |tasks index|}}
 {{log 'model' tasks}}
