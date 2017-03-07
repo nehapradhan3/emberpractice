@@ -30,30 +30,6 @@ define('emberapp/application/adapter', ['exports', 'emberfire/adapters/firebase'
   exports['default'] = _emberfireAdaptersFirebase['default'].extend({});
 });
 // import Ember from 'ember';
-define('emberapp/components/labeled-radio-button', ['exports', 'ember-radio-button/components/labeled-radio-button'], function (exports, _emberRadioButtonComponentsLabeledRadioButton) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberRadioButtonComponentsLabeledRadioButton['default'];
-    }
-  });
-});
-define('emberapp/components/radio-button-input', ['exports', 'ember-radio-button/components/radio-button-input'], function (exports, _emberRadioButtonComponentsRadioButtonInput) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberRadioButtonComponentsRadioButtonInput['default'];
-    }
-  });
-});
-define('emberapp/components/radio-button', ['exports', 'ember-radio-buttons/components/radio-button'], function (exports, _emberRadioButtonsComponentsRadioButton) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberRadioButtonsComponentsRadioButton['default'];
-    }
-  });
-});
 define('emberapp/components/sort-list', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Component.extend({
     tagName: 'ul',
@@ -576,7 +552,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("emberapp/app")["default"].create({"name":"emberapp","version":"0.0.0+95249305"});
+  require("emberapp/app")["default"].create({"name":"emberapp","version":"0.0.0+275c03c7"});
 }
 
 /* jshint ignore:end */
